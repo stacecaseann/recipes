@@ -1,0 +1,27 @@
+###Get all menus
+GET http://localhost:3000/menus
+
+###Get menu by ID
+GET http://localhost:3000/menus/64a7f3f4e4b0c5b6f8d9e1a2
+
+###Get menu by name
+GET http://localhost:3000/menus/name/Weekly%20Menu
+
+###Create a new menu template
+POST http://localhost:3000/menus/template/Weekly%20Menu
+Content-Type: application/json
+
+{
+    "menuName": "Weekly Menu"
+}
+
+###Add a recipe to a menu by id
+PUT http://localhost:3000/menus/Weekly%20Menu/Wednesday/Dinner/id/68d1537b5b08f92199478df0
+Content-Type: application/json
+
+# ###Add a recipe to a menu by name
+# PUT http://localhost:3000/menus/Weekly%20Menu/Saturday/Breakfast/name/Tomato%20Soup
+
+###Delete a menu by ID
+DELETE http://localhost:3000/menus/68d152e4031e91b5bab01eff
+

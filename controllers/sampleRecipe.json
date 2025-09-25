@@ -1,0 +1,29 @@
+{
+    "name": "Tomato Soup 1",
+    "serves": 4,
+    "description": "A classic tomato soup recipe that's easy to make and delicious.",
+    "ingredients": [
+        {
+            "amount": 1,
+            "amountString": "1",
+            "measurement": "14.5 oz can",
+            "ingredient": "tomato soup"
+        },
+        {
+            "amount": 0.5,
+            "amountString": "1/2",
+            "measurement": "teaspoon",
+            "ingredient": "salt"
+        }
+    ],
+    "instructions": [
+        {
+            "stepNumber": 1,
+            "instruction": "Pour the can into a pot"
+        },
+        {
+            "stepNumber": 2,
+            "instruction": "Cook for 10 minutes"
+        }
+    ]
+}

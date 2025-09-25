@@ -1,0 +1,77 @@
+[{
+    "name": "Tomato Soup",
+    "serves": 4,
+    "description": "A classic tomato soup recipe that's easy to make and delicious.",
+    "ingredients": [
+        {
+            "amount": 1,
+            "amountString": "1",
+            "measurement": "14.5 oz can",
+            "ingredient": "tomato soup"
+        },
+        {
+            "amount": 0.5,
+            "amountString": "1/2",
+            "measurement": "teaspoon",
+            "ingredient": "salt"
+        }
+    ],
+    "instructions": [
+        {
+            "stepNumber": 1,
+            "instruction": "Pour the can into a pot"
+        },
+        {
+            "stepNumber": 2,
+            "instruction": "Cook for 10 minutes"
+        }
+    ]
+},
+{
+    "name": "Grilled Cheese Sandwich",
+    "serves": 1,
+    "description": "A quick and easy grilled cheese sandwich.",
+    "ingredients": [
+        {
+            "amount": 2,
+            "amountString": "2",
+            "measurement": "slices",
+            "ingredient": "bread"
+        },
+        {
+            "amount": 1,
+            "amountString": "1",
+            "measurement": "slice",
+            "ingredient": "cheese"
+        },
+        {
+            "amount": 1,
+            "amountString": "1",
+            "measurement": "tablespoon",
+            "ingredient": "butter"
+        }
+    ],
+    "instructions": [
+        {
+            "stepNumber": 1,
+            "instruction": "Butter one side of each bread slice."
+        },
+        {
+            "stepNumber": 2,
+            "instruction": "Place one slice, buttered side down, on a skillet over medium heat."
+        },
+        {
+            "stepNumber": 3,
+            "instruction": "Add the cheese slice on top of the bread in the skillet."
+        },
+        {
+            "stepNumber": 4,
+            "instruction": "Top with the second slice of bread, buttered side up."
+        },
+        {
+            "stepNumber": 5,
+            "instruction": "Cook until golden brown, then flip and cook the other side until golden brown and the cheese is melted."
+        }
+    ]
+}
+]

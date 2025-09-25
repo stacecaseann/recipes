@@ -1,0 +1,69 @@
+### Get all recipes
+GET http://localhost:3000/recipes
+
+### Get recipe by ID
+GET http://localhost:3000/recipes/68cf797fe5eaec35ae26ed7c
+
+### Get recipes by name
+GET http://localhost:3000/recipes/name/Grilled%20Cheese%20Sandwich
+
+### Create a new recipe
+POST http://localhost:3000/recipes
+Content-Type: application/json  
+
+{
+    "name": "Tomato Soup 3",
+    "serves": 4,
+    "description": "A classic tomato soup recipe that's easy to make and delicious.",
+    "ingredients": [
+        {
+            "amount": 1,
+            "amountString": "1",
+            "measurement": "14.5 oz can",
+            "ingredient": "tomato soup"
+        },
+        {
+            "amount": 0.5,
+            "amountString": "1/2",
+            "measurement": "teaspoon",
+            "ingredient": "salt"
+        }
+    ],
+    "instructions": [
+        {
+            "stepNumber": 1,
+            "instruction": "Pour the can into a pot"
+        },
+        {
+            "stepNumber": 2,
+            "instruction": "Cook for 10 minutes"
+        }
+    ]
+}
+
+### Update a recipe by ID
+PUT http://localhost:3000/recipes/68d0bd98db15e02de973c507
+Content-Type: application/json
+
+{
+    "name": "Updated Tomato Soup5",
+    "serves": 4,
+    "description": "An updated classic tomato soup recipe.",
+    "ingredients": [
+        {
+            "amount": 2,
+            "amountString": "2",
+            "measurement": "cups",
+            "ingredient": "extra ingredient"
+        }
+    ],
+    "instructions": [
+        {
+            "stepNumber": 4,
+            "instruction": "Extra step"
+        }
+    ]
+}
+
+### Delete a recipe by ID
+DELETE http://localhost:3000/recipes/68d1537b5b08f92199478df0
