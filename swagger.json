@@ -7,11 +7,14 @@
   },
   "basePath": "/",
   "schemes": [
-    "http, https"
+    "http", "https"
   ],
   "paths": {
     "/api-docs": {
       "get": {
+        "tags": [
+          "Api Docs"
+        ],
         "description": "",
         "responses": {
           "default": {
