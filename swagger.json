@@ -8,15 +8,12 @@
   "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "http",
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/api-docs": {
       "get": {
-        "tags": [
-          "Api Docs"
-        ],        
         "description": "",
         "responses": {
           "default": {
@@ -254,6 +251,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "404": {
+            "description": "Not Found"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -313,6 +313,9 @@
           "200": {
             "description": "OK"
           },
+          "404": {
+            "description": "Not Found"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -362,7 +365,7 @@
         }
       }
     },
-    "/menus/{menuName}/{dayOfWeek}/{mealType}/id/{recipeId}": {
+    "/menus/add-recipe/{menuName}/{dayOfWeek}/{mealType}/id/{recipeId}": {
       "put": {
         "tags": [
           "Menus"

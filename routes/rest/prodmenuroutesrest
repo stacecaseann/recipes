@@ -16,11 +16,8 @@ Content-Type: application/json
 }
 
 ###Add a recipe to a menu by id
-PUT https://recipes-l4df.onrender.com/menus/Weekly%20Menu/Wednesday/Dinner/id/68d1537b5b08f92199478df0
+PUT https://recipes-l4df.onrender.com/menus/add-recipe/Weekly%20Menu/Wednesday/Dinner/id/68d1537b5b08f92199478df0
 Content-Type: application/json
-
-# ###Add a recipe to a menu by name
-# PUT https://recipes-l4df.onrender.com/menus/Weekly%20Menu/Saturday/Breakfast/name/Tomato%20Soup
 
 ###Delete a menu by ID
 DELETE https://recipes-l4df.onrender.com/menus/68d152e4031e91b5bab01eff

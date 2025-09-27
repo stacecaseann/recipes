@@ -66,4 +66,4 @@ Content-Type: application/json
 }
 
 ### Delete a recipe by ID
-DELETE https://recipes-l4df.onrender.com/recipes/68d7efd4ae57f497df8418a6
+DELETE https://recipes-l4df.onrender.com/recipes/68d0bd98db15e02de973c507
