@@ -2,7 +2,7 @@
 GET https://recipes-l4df.onrender.com/recipes
 
 ### Get recipe by ID
-GET https://recipes-l4df.onrender.com/recipes/68cf797fe5eaec35ae26ed7c
+GET https://recipes-l4df.onrender.com/recipes/68d827fa20b13e164e9a6739
 
 ### Get recipes by name
 GET https://recipes-l4df.onrender.com/recipes/name/Grilled%20Cheese%20Sandwich
@@ -12,58 +12,61 @@ POST https://recipes-l4df.onrender.com/recipes
 Content-Type: application/json  
 
 {
-    "name": "Tomato Soup 3",
-    "serves": 4,
-    "description": "A classic tomato soup recipe that's easy to make and delicious.",
-    "ingredients": [
-        {
-            "amount": 1,
-            "amountString": "1",
-            "measurement": "14.5 oz can",
-            "ingredient": "tomato soup"
-        },
-        {
-            "amount": 0.5,
-            "amountString": "1/2",
-            "measurement": "teaspoon",
-            "ingredient": "salt"
-        }
-    ],
-    "instructions": [
-        {
-            "stepNumber": 1,
-            "instruction": "Pour the can into a pot"
-        },
-        {
-            "stepNumber": 2,
-            "instruction": "Cook for 10 minutes"
-        }
-    ]
-}
+  "name": "Beef Tacos",
+  "serves": 4,
+  "description": "Seasoned ground beef served in crispy taco shells with fresh toppings.",
+  "ingredients": [
+    { "amount": 1, "amountString": "1", "measurementDescription": "pound", "measurement": "lb", "ingredient": "ground beef" },
+    { "amount": 1, "amountString": "1", "measurementDescription": "packet", "measurement": "unit", "ingredient": "taco seasoning" },
+    { "amount": 0.5, "amountString": "1/2", "measurementDescription": "cup", "measurement": "cup", "ingredient": "water" },
+    { "amount": 8, "amountString": "8", "measurementDescription": "unit", "measurement": "unit", "ingredient": "taco shells" },
+    { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "shredded lettuce" },
+    { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "cheddar cheese", "ingredientDescription": "shredded" },
+    { "amount": 1, "amountString": "1", "measurementDescription": "unit", "measurement": "unit", "ingredient": "tomato", "ingredientDescription": "diced" },
+    { "amount": 0.5, "amountString": "1/2", "measurementDescription": "cup", "measurement": "cup", "ingredient": "sour cream" },
+    { "amount": 0.25, "amountString": "1/4", "measurementDescription": "cup", "measurement": "cup", "ingredient": "salsa" }
+  ],
+  "instructions": [
+    { "stepNumber": 1, "instruction": "In a skillet over medium heat, cook ground beef until browned. Drain excess fat." },
+    { "stepNumber": 2, "instruction": "Add taco seasoning and water. Simmer for 5 minutes, stirring occasionally." },
+    { "stepNumber": 3, "instruction": "Warm taco shells according to package instructions." },
+    { "stepNumber": 4, "instruction": "Fill each taco shell with beef, lettuce, cheese, and diced tomato." },
+    { "stepNumber": 5, "instruction": "Top with sour cream and salsa. Serve immediately." }
+  ]
+}    
+
 
 ### Update a recipe by ID
-PUT https://recipes-l4df.onrender.com/recipes/68d0bd98db15e02de973c507
+PUT https://recipes-l4df.onrender.com/recipes/68d827fa20b13e164e9a6739
 Content-Type: application/json
 
 {
-    "name": "Updated Tomato Soup5",
-    "serves": 4,
-    "description": "An updated classic tomato soup recipe.",
-    "ingredients": [
-        {
-            "amount": 2,
-            "amountString": "2",
-            "measurement": "cups",
-            "ingredient": "extra ingredient"
-        }
-    ],
-    "instructions": [
-        {
-            "stepNumber": 4,
-            "instruction": "Extra step"
-        }
-    ]
-}
+  "name": "Beef Tacos are the best",
+  "serves": 6,
+  "description": "Seasoned ground beef served in crispy taco shells with fresh toppings.",
+  "ingredients": [
+    { "amount": 1, "amountString": "1", "measurementDescription": "pound", "measurement": "lb", "ingredient": "ground beef" },
+    { "amount": 1, "amountString": "1", "measurementDescription": "packet", "measurement": "unit", "ingredient": "taco seasoning" },
+    { "amount": 0.5, "amountString": "1/2", "measurementDescription": "cup", "measurement": "cup", "ingredient": "water" },
+    { "amount": 8, "amountString": "8", "measurementDescription": "unit", "measurement": "unit", "ingredient": "taco shells" },
+    { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "shredded lettuce" },
+    { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "cheddar cheese", "ingredientDescription": "shredded" },
+    { "amount": 1, "amountString": "1", "measurementDescription": "unit", "measurement": "unit", "ingredient": "tomato", "ingredientDescription": "diced" },
+    { "amount": 0.5, "amountString": "1/2", "measurementDescription": "cup", "measurement": "cup", "ingredient": "sour cream" },
+    { "amount": 0.25, "amountString": "1/4", "measurementDescription": "cup", "measurement": "cup", "ingredient": "salsa" },
+    { "amount": 0.25, "amountString": "1/4", "measurementDescription": "cup", "measurement": "cup", "ingredient": "extra ingredient" }
+  ],
+  "instructions": [
+    { "stepNumber": 1, "instruction": "In a skillet over medium heat, cook ground beef until browned. Drain excess fat." },
+    { "stepNumber": 2, "instruction": "Add taco seasoning and water. Simmer for 5 minutes, stirring occasionally." },
+    { "stepNumber": 3, "instruction": "Warm taco shells according to package instructions." },
+    { "stepNumber": 4, "instruction": "Fill each taco shell with beef, lettuce, cheese, and diced tomato." },
+    { "stepNumber": 5, "instruction": "Top with sour cream and salsa. Serve immediately." },
+    { "stepNumber": 6, "instruction": "extra step." }
+  ]
+}    
+
+
 
 ### Delete a recipe by ID
-DELETE https://recipes-l4df.onrender.com/recipes/68d0bd98db15e02de973c507
+DELETE https://recipes-l4df.onrender.com/recipes/68d8279c20b13e164e9a66b3

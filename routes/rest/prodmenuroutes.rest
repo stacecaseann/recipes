@@ -2,13 +2,13 @@
 GET https://recipes-l4df.onrender.com/menus
 
 ###Get menu by ID
-GET https://recipes-l4df.onrender.com/menus/68d153375b08f92199478d08
+GET https://recipes-l4df.onrender.com/menus/68d8242d20b13e164e9a61d0
 
 ###Get menu by name
 GET https://recipes-l4df.onrender.com/menus/name/Weekly%20Menu
 
 ###Create a new menu template
-POST https://recipes-l4df.onrender.com/menus/template/Weekly%20Menu
+POST https://recipes-l4df.onrender.com/menus/template
 Content-Type: application/json
 
 {
@@ -16,9 +16,9 @@ Content-Type: application/json
 }
 
 ###Add a recipe to a menu by id
-PUT https://recipes-l4df.onrender.com/menus/add-recipe/Weekly%20Menu/Wednesday/Dinner/id/68d1537b5b08f92199478df0
+PUT https://recipes-l4df.onrender.com/menus/add-recipe/Weekly%20Menu/Tuesday/Snacks/id/68d7f868410a9511bf3c6cf3
 Content-Type: application/json
 
 ###Delete a menu by ID
-DELETE https://recipes-l4df.onrender.com/menus/68d152e4031e91b5bab01eff
+DELETE https://recipes-l4df.onrender.com/menus/68d8286720b13e164e9a6874
 
