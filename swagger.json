@@ -14,6 +14,9 @@
   "paths": {
     "/api-docs": {
       "get": {
+        "tags": [
+          "Api Docs"
+        ],        
         "description": "",
         "responses": {
           "default": {
@@ -64,6 +67,9 @@
           "201": {
             "description": "Created"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -93,6 +99,9 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -103,7 +112,7 @@
           "Recipes"
         ],
         "summary": "Updates a recipe by ID.",
-        "description": "",
+        "description": "Updates fields in the recipe. The ingredients and instructions will need the complete list in order to be updated correctly.",
         "produces": [
           "application/json"
         ],
@@ -127,6 +136,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
@@ -155,6 +167,9 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -166,7 +181,7 @@
         "tags": [
           "Recipes"
         ],
-        "summary": "Gets a recipe by Name.",
+        "summary": "Gets all recipes to match Name.",
         "description": "",
         "produces": [
           "application/json"
@@ -177,12 +192,15 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The ID of the recipe to retrieve."
+            "description": "The name of the recipes to retrieve."
           }
         ],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
@@ -190,24 +208,15 @@
         }
       }
     },
-    "/recipes/filter/{filter}": {
+    "/menus/": {
       "get": {
         "tags": [
-          "Recipes"
+          "Menus"
         ],
-        "summary": "Gets a recipe by json filter.",
+        "summary": "Gets all menus.",
         "description": "",
         "produces": [
           "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "filter",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "Json structure filter to retrieve recipes."
-          }
         ],
         "responses": {
           "200": {
@@ -242,6 +251,9 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -268,6 +280,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
@@ -304,7 +319,7 @@
         }
       }
     },
-    "/menus/template/{menuName}": {
+    "/menus/template": {
       "post": {
         "tags": [
           "Menus"
@@ -317,15 +332,29 @@
         "parameters": [
           {
             "name": "menuName",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name of the menu to create."
+            "description": "The name of the menu to create.",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "menuName": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
@@ -333,7 +362,7 @@
         }
       }
     },
-    "/menus/{menuName}/{dayOfWeek}/{mealType}/{recipeName}": {
+    "/menus/{menuName}/{dayOfWeek}/{mealType}/id/{recipeId}": {
       "put": {
         "tags": [
           "Menus"
@@ -366,16 +395,19 @@
             "description": "Then meal type to add the recipe to."
           },
           {
-            "name": "recipeName",
+            "name": "recipeId",
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Then recipe name to add"
+            "description": "Then recipe id to add"
           }
         ],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
