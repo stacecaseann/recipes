@@ -7,7 +7,7 @@ const mealTypeOrderMap = {
   Snack: 4,
 };
 const menuSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
+  menuName: { type: String, required: true, unique: true },
   dailyRecipes: [
     {
       dayOfWeek: {

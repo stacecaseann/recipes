@@ -141,13 +141,13 @@ const validateRecipeNameRules = [
 ];
 
 const validateMenuRules = [
-  body('name')
+  body('menuName')
     .isString()
     .withMessage('Menu name must be a string')
     .notEmpty()
     .withMessage('Menu name is required')
     .custom(async (value) => {
-      const existing = await Menu.findOne({ name: value });
+      const existing = await Menu.findOne({ menuName: value });
       if (existing) {
         throw new Error('Menu name already in use');
       }
@@ -155,13 +155,13 @@ const validateMenuRules = [
 ];
 
 const validateMenuNameRules = [
-  body('name')
+  body('menuName')
     .isString()
     .withMessage('Menu name must be a string')
     .notEmpty()
     .withMessage('Menu name is required')
     .custom(async (value) => {
-      const existing = await Menu.findOne({ name: value });
+      const existing = await Menu.findOne({ menuName: value });
       if (existing) {
         throw new Error('Menu name already in use');
       }
@@ -169,13 +169,13 @@ const validateMenuNameRules = [
 ];
 
 const validateAddRecipeToMenuRules = [
-  body('name')
+  body('menuName')
     .isString()
     .withMessage('Menu name must be a string')
     .notEmpty()
     .withMessage('Menu name is required')
     .custom(async (value) => {
-      const existing = await Menu.findOne({ name: value });
+      const existing = await Menu.findOne({ menuName: value });
       if (!existing) {
         throw new Error('Menu does not exist');
       }

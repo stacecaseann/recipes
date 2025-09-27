@@ -73,5 +73,111 @@
             "instruction": "Cook until golden brown, then flip and cook the other side until golden brown and the cheese is melted."
         }
     ]
-}
+},
+{
+    "name": "Classic Pancakes",
+    "serves": 4,
+    "description": "Fluffy, golden pancakes perfect for breakfast.",
+    "ingredients": [
+      { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "all-purpose flour", "ingredientDescription": "sifted" },
+      { "amount": 2, "amountString": "2", "measurementDescription": "tablespoon", "measurement": "tbsp", "ingredient": "sugar" },
+      { "amount": 2, "amountString": "2", "measurementDescription": "teaspoon", "measurement": "tsp", "ingredient": "baking powder" },
+      { "amount": 0.5, "amountString": "1/2", "measurementDescription": "teaspoon", "measurement": "tsp", "ingredient": "salt" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "milk" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "large", "measurement": "unit", "ingredient": "egg" },
+      { "amount": 2, "amountString": "2", "measurementDescription": "tablespoon", "measurement": "tbsp", "ingredient": "butter", "ingredientDescription": "melted" }
+    ],
+    "instructions": [
+      { "stepNumber": 1, "instruction": "In a bowl, whisk together flour, sugar, baking powder, and salt." },
+      { "stepNumber": 2, "instruction": "Add milk, egg, and melted butter. Stir until just combined." },
+      { "stepNumber": 3, "instruction": "Heat a skillet over medium heat and grease lightly." },
+      { "stepNumber": 4, "instruction": "Pour batter in 1/4 cup portions. Cook until bubbles form, flip, and cook until golden." }
+    ]
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "serves": 6,
+    "description": "Rich, hearty Italian pasta dish with a tomato-meat sauce.",
+    "ingredients": [
+      { "amount": 2, "amountString": "2", "measurementDescription": "tablespoon", "measurement": "tbsp", "ingredient": "olive oil" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "large", "measurement": "unit", "ingredient": "onion", "ingredientDescription": "diced" },
+      { "amount": 2, "amountString": "2", "measurementDescription": "clove", "measurement": "unit", "ingredient": "garlic", "ingredientDescription": "minced" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "pound", "measurement": "lb", "ingredient": "ground beef" },
+      { "amount": 28, "amountString": "28", "measurementDescription": "ounce", "measurement": "oz", "ingredient": "crushed tomatoes" },
+      { "amount": 3, "amountString": "3", "measurementDescription": "tablespoon", "measurement": "tbsp", "ingredient": "tomato paste" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "teaspoon", "measurement": "tsp", "ingredient": "dried oregano" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "teaspoon", "measurement": "tsp", "ingredient": "dried basil" },
+      { "amount": 12, "amountString": "12", "measurementDescription": "ounce", "measurement": "oz", "ingredient": "spaghetti pasta" }
+    ],
+    "instructions": [
+      { "stepNumber": 1, "instruction": "Heat olive oil in a large skillet. Add onion and garlic, cook until softened." },
+      { "stepNumber": 2, "instruction": "Add ground beef, cook until browned." },
+      { "stepNumber": 3, "instruction": "Stir in crushed tomatoes, tomato paste, oregano, and basil. Simmer for 20 minutes." },
+      { "stepNumber": 4, "instruction": "Cook spaghetti according to package instructions. Drain." },
+      { "stepNumber": 5, "instruction": "Serve sauce over spaghetti." }
+    ]
+  },
+  {
+    "name": "Chicken Caesar Salad",
+    "serves": 2,
+    "description": "Crisp romaine lettuce with grilled chicken, croutons, and Caesar dressing.",
+    "ingredients": [
+      { "amount": 2, "amountString": "2", "measurementDescription": "cups", "measurement": "cup", "ingredient": "romaine lettuce", "ingredientDescription": "chopped" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "unit", "measurement": "unit", "ingredient": "grilled chicken breast", "ingredientDescription": "sliced" },
+      { "amount": 0.5, "amountString": "1/2", "measurementDescription": "cup", "measurement": "cup", "ingredient": "croutons" },
+      { "amount": 0.25, "amountString": "1/4", "measurementDescription": "cup", "measurement": "cup", "ingredient": "Parmesan cheese", "ingredientDescription": "grated" },
+      { "amount": 0.25, "amountString": "1/4", "measurementDescription": "cup", "measurement": "cup", "ingredient": "Caesar dressing" }
+    ],
+    "instructions": [
+      { "stepNumber": 1, "instruction": "Place chopped lettuce in a large bowl." },
+      { "stepNumber": 2, "instruction": "Add sliced chicken breast, croutons, and Parmesan cheese." },
+      { "stepNumber": 3, "instruction": "Drizzle with Caesar dressing and toss well." },
+      { "stepNumber": 4, "instruction": "Serve immediately." }
+    ]
+  },
+  {
+    "name": "Vegetable Stir-Fry",
+    "serves": 4,
+    "description": "Quick, colorful stir-fry with a soy-based sauce.",
+    "ingredients": [
+      { "amount": 2, "amountString": "2", "measurementDescription": "tablespoon", "measurement": "tbsp", "ingredient": "vegetable oil" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "broccoli florets" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "bell pepper", "ingredientDescription": "sliced" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "carrots", "ingredientDescription": "julienned" },
+      { "amount": 2, "amountString": "2", "measurementDescription": "tablespoon", "measurement": "tbsp", "ingredient": "soy sauce" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "tablespoon", "measurement": "tbsp", "ingredient": "oyster sauce" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "teaspoon", "measurement": "tsp", "ingredient": "sesame oil" }
+    ],
+    "instructions": [
+      { "stepNumber": 1, "instruction": "Heat oil in a wok over high heat." },
+      { "stepNumber": 2, "instruction": "Add broccoli, peppers, and carrots. Stir-fry for 4–5 minutes." },
+      { "stepNumber": 3, "instruction": "Stir in soy sauce, oyster sauce, and sesame oil." },
+      { "stepNumber": 4, "instruction": "Cook for 2 more minutes and serve hot." }
+    ]
+  },
+  {
+    "name": "Chocolate Chip Cookies",
+    "serves": 24,
+    "description": "Chewy, buttery cookies loaded with chocolate chips.",
+    "ingredients": [
+      { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "butter", "ingredientDescription": "softened" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "sugar" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "brown sugar" },
+      { "amount": 2, "amountString": "2", "measurementDescription": "unit", "measurement": "unit", "ingredient": "eggs" },
+      { "amount": 2, "amountString": "2", "measurementDescription": "teaspoon", "measurement": "tsp", "ingredient": "vanilla extract" },
+      { "amount": 3, "amountString": "3", "measurementDescription": "cups", "measurement": "cup", "ingredient": "all-purpose flour" },
+      { "amount": 1, "amountString": "1", "measurementDescription": "teaspoon", "measurement": "tsp", "ingredient": "baking soda" },
+      { "amount": 0.5, "amountString": "1/2", "measurementDescription": "teaspoon", "measurement": "tsp", "ingredient": "salt" },
+      { "amount": 2, "amountString": "2", "measurementDescription": "cups", "measurement": "cup", "ingredient": "chocolate chips" }
+    ],
+    "instructions": [
+      { "stepNumber": 1, "instruction": "Preheat oven to 350°F (175°C)." },
+      { "stepNumber": 2, "instruction": "Cream together butter, sugar, and brown sugar." },
+      { "stepNumber": 3, "instruction": "Beat in eggs and vanilla." },
+      { "stepNumber": 4, "instruction": "Add flour, baking soda, and salt. Mix until combined." },
+      { "stepNumber": 5, "instruction": "Stir in chocolate chips." },
+      { "stepNumber": 6, "instruction": "Drop spoonfuls onto baking sheet and bake for 10–12 minutes." }
+    ]
+  }
+
 ]

@@ -42,7 +42,7 @@ const createMenuTemplate = async (req, res) => {
   //#swagger.summary = 'Creates an empty menu template.'
   //#swagger.parameters['menuName'] = { description: 'The name of the menu to create.' }
   try {
-    const result = await menuModel.createMenuTemplate(req.params.menuName);
+    const result = await menuModel.createMenuTemplate(req.body.menuName);
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(result);
   } catch (err) {

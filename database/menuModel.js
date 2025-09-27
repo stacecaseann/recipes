@@ -14,7 +14,7 @@ async function getAllMenus() {
 
 async function getMenuById(menuId) {
   try {
-    const menu = await Menu.findById(menuId).populate('recipes');
+    const menu = await Menu.findById(menuId).populate('dailyRecipes.meals.recipes');
     console.log('Menu found:', menu);
     return menu;
   } catch (err) {
@@ -25,7 +25,7 @@ async function getMenuById(menuId) {
 
 async function getMenuByName(menuName) {
   try {
-    const menu = await Menu.findOne({ name: menuName }).populate('recipes');
+    const menu = await Menu.findOne({ menuName: menuName }).populate('dailyRecipes.meals.recipes');
     console.log('Menu found:', menu);
     return menu;
   } catch (err) {
@@ -37,7 +37,7 @@ async function getMenuByName(menuName) {
 async function createMenuTemplate(menuName) {
   try {
     const menu = await Menu.create({
-      name: menuName,
+      menuName: menuName,
       dailyRecipes: [
         {
           dayOfWeek: 'Monday',
@@ -119,11 +119,11 @@ async function addRecipeToMenuByName(
   recipeName,
 ) {
   try {
-    const menu = await Menu.findOne({ name: menuName });
+    const menu = await Menu.findOne({ menuName: menuName });
     if (!menu) {
       throw new Error('Menu not found');
     }
-    const recipeId = await Recipe.findOne({ name: recipeName }).select('_id');
+    const recipeId = await Recipe.findOne({ menuName: recipeName }).select('_id');
     if (!recipeId) {
       throw new Error('Recipe not found');
     }
@@ -145,7 +145,7 @@ async function addRecipeToMenuByName(
 
 async function addRecipeToMenuById(menuName, dayOfWeek, mealType, recipeId) {
   try {
-    const menu = await Menu.findOne({ name: menuName });
+    const menu = await Menu.findOne({ menuName: menuName });
     if (!menu) {
       throw new Error('Menu not found');
     }

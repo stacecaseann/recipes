@@ -13,7 +13,7 @@ router.get(
 
 router.get('/name/:menuName', menuController.getMenuByName);
 router.post(
-  '/template/:menuName',
+  '/template',
   validation.validateMenuNameRules,
   validation.validateValues,
   menuController.createMenuTemplate,
