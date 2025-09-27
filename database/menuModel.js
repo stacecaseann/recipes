@@ -112,36 +112,36 @@ async function createMenuTemplate(menuName) {
   }
 }
 
-async function addRecipeToMenuByName(
-  menuName,
-  dayOfWeek,
-  mealType,
-  recipeName,
-) {
-  try {
-    const menu = await Menu.findOne({ menuName: menuName });
-    if (!menu) {
-      throw new Error('Menu not found');
-    }
-    const recipeId = await Recipe.findOne({ menuName: recipeName }).select('_id');
-    if (!recipeId) {
-      throw new Error('Recipe not found');
-    }
-    const dayEntry = menu.dailyRecipes.find(
-      (entry) => entry.dayOfWeek === dayOfWeek && entry.mealType === mealType,
-    );
-    if (!dayEntry) {
-      throw new Error('Day or meal type not found in menu');
-    }
-    //TODO validate that recipeId exists in Recipe collection
-    dayEntry.recipes.push(recipeId);
-    await menu.save();
-    console.log('Recipe added to menu:', menu);
-  } catch (err) {
-    console.error('Error adding recipe to menu:', err.message);
-    throw err;
-  }
-}
+// async function addRecipeToMenuByName(
+//   menuName,
+//   dayOfWeek,
+//   mealType,
+//   recipeName,
+// ) {
+//   try {
+//     const menu = await Menu.findOne({ menuName: menuName });
+//     if (!menu) {
+//       throw new Error('Menu not found');
+//     }
+//     const recipeId = await Recipe.findOne({ menuName: recipeName }).select('_id');
+//     if (!recipeId) {
+//       throw new Error('Recipe not found');
+//     }
+//     const dayEntry = menu.dailyRecipes.find(
+//       (entry) => entry.dayOfWeek === dayOfWeek && entry.mealType === mealType,
+//     );
+//     if (!dayEntry) {
+//       throw new Error('Day or meal type not found in menu');
+//     }
+//     //TODO validate that recipeId exists in Recipe collection
+//     dayEntry.recipes.push(recipeId);
+//     await menu.save();
+//     console.log('Recipe added to menu:', menu);
+//   } catch (err) {
+//     console.error('Error adding recipe to menu:', err.message);
+//     throw err;
+//   }
+// }
 
 async function addRecipeToMenuById(menuName, dayOfWeek, mealType, recipeId) {
   try {
@@ -187,7 +187,6 @@ module.exports = {
   getMenuById,
   getMenuByName,
   createMenuTemplate,
-  addRecipeToMenuByName,
   addRecipeToMenuById,
   deleteMenu,
 };

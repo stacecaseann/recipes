@@ -1,4 +1,4 @@
-const { body, validationResult } = require('express-validator');
+const { body, param, validationResult } = require('express-validator');
 const { ObjectId } = require('mongodb');
 const Menu = require('../schemas/Menu');
 const Recipe = require('../schemas/Recipe');
@@ -169,7 +169,7 @@ const validateMenuNameRules = [
 ];
 
 const validateAddRecipeToMenuRules = [
-  body('menuName')
+  param('menuName')
     .isString()
     .withMessage('Menu name must be a string')
     .notEmpty()
@@ -180,7 +180,7 @@ const validateAddRecipeToMenuRules = [
         throw new Error('Menu does not exist');
       }
     }),
-  body('dayOfWeek')
+  param('dayOfWeek')
     .isString()
     .withMessage('Day of week must be a string')
     .notEmpty()
@@ -195,14 +195,14 @@ const validateAddRecipeToMenuRules = [
       'Sunday',
     ])
     .withMessage('Day of week must be a valid day'),
-  body('mealType')
+  param('mealType')
     .isString()
     .withMessage('Meal type must be a string')
     .notEmpty()
     .withMessage('Meal type is required')
     .isIn(['Breakfast', 'Lunch', 'Dinner', 'Snacks'])
     .withMessage('Meal type must be a valid meal type'),
-  body('recipeId')
+  param('recipeId')
     .isString()
     .withMessage('Recipe ID must be a string')
     .notEmpty()

@@ -23,12 +23,13 @@ router.post(
 //   menuController.addRecipeToMenuByName,
 // );
 router.put(
-  '/:menuName/:dayOfWeek/:mealType/id/:recipeId',
+  '/add-recipe/:menuName/:dayOfWeek/:mealType/id/:recipeId',
   validation.validateAddRecipeToMenuRules,
-  validation.validateMenuNameRules,
+  // validation.validateMenuNameRules,
   validation.validateValues,
   menuController.addRecipeToMenuById,
 );
+
 router.delete(
   '/:menuId',
   validation.validateMongoMenuId,
