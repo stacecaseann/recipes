@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const recipeController = require('../controllers/recipeController');
 const validation = require('../middleware/validation');
+const { isAuthenticated } = require('../middleware/authenticate');
 
 router.get('/', recipeController.getAllRecipes);
 router.get(
@@ -21,6 +22,7 @@ router.post(
   validation.validateRecipeRules,
   validation.validateRecipeNameRules,
   validation.validateValues,
+  isAuthenticated,
   recipeController.createRecipe,
 );
 router.put(
@@ -28,12 +30,14 @@ router.put(
   validation.validateMongoRecipeId,
   validation.validateRecipeNameRules,
   validation.validateValues,
+  isAuthenticated,
   recipeController.updateRecipe,
 );
 router.delete(
   '/:recipeId',
   validation.validateMongoRecipeId,
   validation.validateValues,
+  isAuthenticated,
   recipeController.deleteRecipe,
 );
 

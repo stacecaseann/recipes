@@ -2,7 +2,7 @@
 GET http://localhost:3000/recipes
 
 ### Get recipe by ID
-GET http://localhost:3000/recipes/68cf797fe5eaec35ae26ed7c
+GET http://localhost:3000/recipes/68cf87031e5caee7d35cc489
 
 ### Get recipes by name
 GET http://localhost:3000/recipes/name/Grilled%20Cheese%20Sandwich
@@ -71,4 +71,5 @@ Content-Type: application/json
 }
 
 ### Delete a recipe by ID
-DELETE http://localhost:3000/recipes/68d1537b5b08f92199478df0
+DELETE https://localhost:3000/recipes/68d9d0845539851bcec2283d
+Cookie: connect.sid=s%3A7-6i38uGDGOpTAhKwqrWa5bxWShRJiqk.JuS8u7Ec%2BQrokuqp%2BgTSPrIIaiiaOzyDbOIIJpK7CgY
