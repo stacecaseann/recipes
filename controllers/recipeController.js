@@ -54,7 +54,37 @@ const getRecipesByName = async (req, res) => {
 const createRecipe = async (req, res) => {
   //#swagger.tags = ['Recipes']
   //#swagger.summary = 'Creates a new recipe.'
-  //#swagger.parameters['recipe'] = { in: 'body', description: 'The recipe to create.', schema: { $ref: "#/definitions/Recipe" } }
+  /*#swagger.parameters['recipe'] = {
+    in: 'body',
+    description: 'The recipe to create.',
+    schema: {
+      example: {
+        "name": "Chicken Parmesan",
+        "serves": 4,
+        "description": "Crispy breaded chicken breasts topped with marinara sauce and melted cheese.",
+        "ingredients": [
+          { "amount": 2, "amountString": "2", "measurementDescription": "unit", "measurement": "unit", "ingredient": "chicken breasts", "ingredientDescription": "boneless, skinless" },
+          { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "breadcrumbs", "ingredientDescription": "Italian seasoned" },
+          { "amount": 0.5, "amountString": "1/2", "measurementDescription": "cup", "measurement": "cup", "ingredient": "Parmesan cheese", "ingredientDescription": "grated" },
+          { "amount": 2, "amountString": "2", "measurementDescription": "unit", "measurement": "unit", "ingredient": "eggs", "ingredientDescription": "beaten" },
+          { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "marinara sauce" },
+          { "amount": 1, "amountString": "1", "measurementDescription": "cup", "measurement": "cup", "ingredient": "mozzarella cheese", "ingredientDescription": "shredded" },
+          { "amount": 2, "amountString": "2", "measurementDescription": "tablespoon", "measurement": "tbsp", "ingredient": "olive oil" },
+          { "amount": 0.25, "amountString": "1/4", "measurementDescription": "teaspoon", "measurement": "tsp", "ingredient": "black pepper" },
+          { "amount": 0.25, "amountString": "1/4", "measurementDescription": "teaspoon", "measurement": "tsp", "ingredient": "salt" }
+        ],
+        "instructions": [
+          { "stepNumber": 1, "instruction": "Preheat oven to 375°F (190°C)." },
+          { "stepNumber": 2, "instruction": "Mix breadcrumbs and Parmesan cheese in a shallow dish." },
+          { "stepNumber": 3, "instruction": "Dip chicken breasts in beaten eggs, then coat with breadcrumb mixture." },
+          { "stepNumber": 4, "instruction": "Heat olive oil in a skillet over medium heat. Cook chicken until golden brown on both sides." },
+          { "stepNumber": 5, "instruction": "Place chicken in a baking dish. Top each breast with marinara sauce and mozzarella cheese." },
+          { "stepNumber": 6, "instruction": "Bake for 20–25 minutes, until chicken is cooked through and cheese is bubbly." },
+          { "stepNumber": 7, "instruction": "Serve hot with pasta or a side salad." }
+        ]
+      }
+    }
+  } */
   try {
     const result = await recipeModel.createRecipe(req.body);
     res.setHeader('Content-Type', 'application/json');
