@@ -428,12 +428,6 @@
         ],
         "parameters": [
           {
-            "name": "menuName",
-            "description": "The name of the menu to create.",
-            "in": "query",
-            "type": "string"
-          },
-          {
             "name": "body",
             "in": "body",
             "schema": {
